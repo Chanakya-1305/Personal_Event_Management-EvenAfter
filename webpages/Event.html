@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EverAfter | Personal Event Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://kit.fontawesome.com/073f65d684.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'homepage' %}">EverAfter.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'homepage' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'event' %}">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'aboutus' %}">About Us</a>
+                </li>
+            </ul>
+            <div class="d-flex gap-2">
+                <a href="{% url 'login' %}"  class="btn btn-outline-secondary"> Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<section class="section" id="events">
+    <div class="container">
+        <div class="text-center">
+            <span class="small-heading">What We Organize</span>
+            <h2 class="section-heading"> Celebrate Every Occasion</h2>
+            <p class="section-subtitle">Whatever the occasion, we help you create unforgettable experiences with thoughtfulplanning and beautiful arrangements.</p> 
+        </div>
+            <div class = "d-flex justify-content-center flex-wrap row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=700" alt="Wedding Event">
+                        <h5>Wedding Celebrations</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=700"
+                            alt="Birthday Celebration">
+                        <h5>Birthday Parties</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=700" alt="Engagement">
+                        <h5>Engagement Events</h5>
+                    </div>
+                </div>
+            </div>
+            <div class = "d-flex justify-content-center flex-wrap row g-4 mt-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=700" alt="Reception">
+                        <h5>Wedding Receptions</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=700" alt="Anniversary">
+                        <h5>Anniversary Parties</h5>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="category-card">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=700" alt="Special Events">
+                        <h5>Special Celebrations</h5>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+</body>
+</html>
